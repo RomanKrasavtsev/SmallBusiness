@@ -2,7 +2,7 @@
 
 Analytic system for small business.
 
-== Configution information
+== Configuration information 
 
 * Ruby version = 2.2.2
 
