@@ -2,7 +2,9 @@
 
 Analytic system for small business
 
-* Ruby version = 
+* Ruby version = 2.2.2
+
+* Rails version = 4.2.1
 
 * System dependencies
 
