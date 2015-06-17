@@ -3,6 +3,9 @@ require 'test_helper'
 class ClientsControllerTest < ActionController::TestCase
   setup do
     @client = clients(:one)
+    @update = {
+      description: 'Client1'
+    }
   end
 
   test "should get index" do
@@ -18,7 +21,7 @@ class ClientsControllerTest < ActionController::TestCase
 
   test "should create client" do
     assert_difference('Client.count') do
-      post :create, client: { description: @client.description }
+      post :create, client: @update
     end
 
     assert_redirected_to client_path(assigns(:client))
@@ -35,7 +38,7 @@ class ClientsControllerTest < ActionController::TestCase
   end
 
   test "should update client" do
-    patch :update, id: @client, client: { description: @client.description }
+    patch :update, id: @client, client: @update
     assert_redirected_to client_path(assigns(:client))
   end
 
