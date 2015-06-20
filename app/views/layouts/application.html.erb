@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mountt</title>
+  <title>Mountt - improve your business</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class='<%= controller.controller_name %>'>
+<body>
+	
+	<nav class="sidebar open">
+		<div class="brand">
+		</div>
+		<div class="menu">
+		</div>
+	</nav>
 
-<%= yield %>
+	<nav class="navbar open">
+		<button type="button" class="btn btn-primary" aria-label="Left Align">
+  			<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+		</button>
+		<div class="welcome">
+		</div>
+		<div class="logout">
+		</div>
+	</nav>
 
+	<div class="main-panel open">	
+		<div class='<%= controller.controller_name %>'>
+			<%= yield %>
+		</div>
+	</div>
 </body>
 </html>
