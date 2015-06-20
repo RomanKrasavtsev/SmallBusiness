@@ -7,36 +7,51 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
-	<nav class="sidebar open">
-		<div class="brand">
-			<%= image_tag("logo.png") %>
-		</div>
-		<div class="menu">
+    
+    <nav class="sidebar open">
+        <div class="brand">
+            <%= image_tag("logo.png") %>
+        </div>
+        <div class="menu">
+            <ul>
+                <li> 
+                    <%= fa_icon "bar-chart" %>
+                    <%= link_to 'Dashboard', dashboard_path %>
+                </li>
+                <li>
+                    <%= fa_icon "user" %>
+                    <%= link_to 'Clients', clients_path %>
+                </li>
+                <li>
+                    <%= fa_icon "money" %>
+                    <%= link_to 'Sales', dashboard_path %>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-		</div>
-	</nav>
+    <nav class="navbar open">
+        <div class="left">
+            <button type="button" class="btn btn-primary" aria-label="Left Align">
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="right">
+            <div class="welcome">
+                Welcome to Mountt, 
+                <span class="username">Roman Krasavtsev</span>
+            </div>
+            <div class="logout">
+                <span class="glyphicon glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                Log out
+            </div>
+        </div>
+    </nav>
 
-	<nav class="navbar open">
-		<div class="left">
-			<button type="button" class="btn btn-primary" aria-label="Left Align">
-	  			<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-			</button>
-		</div>
-		<div class="right">
-			<div class="welcome">
-				Welcome to Mountt, Roman Krasavtsev
-			</div>
-			<div class="logout">
-				Log out
-			</div>
-		</div>
-	</nav>
-
-	<div class="main-panel open">	
-		<div class='<%= controller.controller_name %>'>
-			<%= yield %>
-		</div>
-	</div>
+    <div class="main-panel open">
+        <div class='<%= controller.controller_name %>'>
+            <%= yield %>
+        </div>
+    </div>
 </body>
 </html>
