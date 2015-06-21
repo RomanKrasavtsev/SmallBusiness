@@ -3,25 +3,44 @@
 <% end %>
 
 <div class="entry">
+     <div class="panel panel-default">
+        <div class="panel-heading">Company Performance </div>
+        <%= line_chart [
+            ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+            ]%>
+    </div>
+</div>
+
+<div class="entry">
+     <div class="panel panel-default">
+        <div class="panel-heading">New clients by day </div>
+        <%= line_chart Client.group_by_month(:created_at).count %>
+    </div>
+</div>
+
+<div class="entry">
     <div class="panel panel-default">
         <div class="panel-heading">Clients (<%= @clients.count %>) </div>
-            <table class="table table-hover">
-                <thead>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% i = 0%>
+                <% @clients.each do |client| %>
                     <tr>
-                        <th>#</th>
-                        <th>Description</th>
+                        <th><%= i += 1 %></th>
+                        <td> <%= client.description %> </td>                    
                     </tr>
-                </thead>
-                <tbody>
-                    <% i = 0%>
-                    <% @clients.each do |client| %>
-                        <tr>
-                            <th><%= i += 1 %></th>
-                            <td> <%= client.description %> </td>                    
-                        </tr>
-                    <% end %>
-                </tbody>
-            </table>
-        </div>
+                <% end %>
+            </tbody>
+        </table>
     </div>
 </div>
