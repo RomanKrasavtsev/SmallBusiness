@@ -19,9 +19,16 @@
           <tr>
             <th><%= i += 1 %></th>
             <td><%= client.description %></td>
-            <td><%= link_to 'Show', client %></td>
-            <td><%= link_to 'Edit', edit_client_path(client) %></td>
-            <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>                    
+            <td>
+              <%= fa_icon "info" %>
+              <%= link_to 'Show', client %>
+             |
+              <%= fa_icon "pencil-square-o" %>
+              <%= link_to 'Edit', edit_client_path(client) %>
+             |
+              <%= fa_icon "times" %>
+              <%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>                    
           </tr>
         <% end %>
       </tbody>
