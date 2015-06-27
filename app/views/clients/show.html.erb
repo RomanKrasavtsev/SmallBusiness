@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to ' Back', clients_path, :class => 'btn btn-primary fa fa-plus' %>
+
 <p>
   <strong>Description:</strong>
   <%= @client.description %>
 </p>
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<%= link_to ' Edit', edit_client_path(@client), :class => 'btn btn-primary fa fa-pencil-square-o' %>

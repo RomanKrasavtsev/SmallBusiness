@@ -4,8 +4,8 @@
 
 <div class="entry">
      <div class="panel panel-default">
-        <div class="panel-heading">New clients by day </div>
-        <%= line_chart Client.group_by_month(:created_at, range: 1.year.ago.midnight..Time.now).count %>
+        <div class="panel-heading">The best months for new account development</div>
+        <%= area_chart @clients_months.count, { "discrete": true } %>
     </div>
 </div>
 
@@ -17,6 +17,8 @@
                 <tr>
                     <th>#</th>
                     <th>Description</th>
+                    <th>Created</th>
+                    <th>Updated</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,10 +26,18 @@
                 <% @clients.each do |client| %>
                     <tr>
                         <th><%= i += 1 %></th>
-                        <td> <%= client.description %> </td>                    
+                        <td> <%= client.description %> </td>       
+                        <td> <%= client.created_at %> </td>       
+                        <td> <%= client.updated_at %> </td>                    
                     </tr>
                 <% end %>
             </tbody>
         </table>
     </div>
+</div>
+
+<div class="entry">
+    <% @clients_months.keys.sort.each do |client| %>
+        <%= client %> <br>
+    <% end %>
 </div>
