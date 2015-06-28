@@ -30,7 +30,7 @@
               <%= fa_icon "pencil-square-o" %>
               <%= link_to 'Edit', edit_client_path(client) %>
              |
-              <%= fa_icon "times" %>
+              <%= fa_icon "user-times" %>
               <%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %>
             </td>                    
           </tr>
@@ -41,4 +41,4 @@
   </div>
 </div>
 
-<%= link_to ' New Client', new_client_path, :class => 'btn btn-primary fa fa-plus' %>
+<%= link_to ' New Client', new_client_path, :class => 'btn btn-primary fa fa-user-plus' %>

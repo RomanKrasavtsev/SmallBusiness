@@ -19,11 +19,12 @@
 $(function() {
 
   $(window).load(function(){
-   
+  	alert("load");   
   });
 
   
   $("#menu-button").click(function(){
+  	alert("click");
     $(".sidebar").toggleClass("sidebar-close");
     $(".fa-times").toggleClass("fa-bars");
     $(".navbar").toggleClass("navbar-close");
