@@ -26,15 +26,22 @@ body
 	width: 250px
 	height: 100%
 	background: #337ab7
+.sidebar-close
+	display: none
 .navbar
 	min-height: 50px
 	background: white
 	margin-left: 250px
 	padding: 7px
+.navbar-close
+	width: 100%
+	margin-left: 0px
 .main-panel
 	margin-left: 250px
 	padding: 7px
 	background: #f5f5f5
+.main-panel-close
+	margin-left: 0px
 .brand
 	padding-left: 20px
 .panel-default > .panel-heading
@@ -76,3 +83,15 @@ td a:hover
 	padding-bottom: 25px
 .menu li i
 	padding-right: 7px
+
+.fa-times
+	-webkit-transform: rotate(180deg)
+	-webkit-transition-property: margin, -webkit-transform
+	-webkit-transition-duration: .2s
+	-webkit-transition-delay: .2s, 0
+
+.fa-bars
+	-webkit-transform: rotate(0deg)
+	-webkit-transition-property: margin, -webkit-transform
+	-webkit-transition-duration: .2s
+	-webkit-transition-delay: .2s, 0
