@@ -16,10 +16,7 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-$(function() {
-
-  $(window).load(function(){
-  });
+function ready() {
   
   $("#menu-button").click(function(){
     $(".sidebar").toggleClass("sidebar-close");
@@ -27,4 +24,7 @@ $(function() {
     $(".navbar").toggleClass("navbar-close");
     $(".main-panel").toggleClass("main-panel-close");
   });
-});
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
