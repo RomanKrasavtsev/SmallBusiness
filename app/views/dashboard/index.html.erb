@@ -5,6 +5,22 @@
 <div class="entry">
      <div class="panel panel-default">
         <div class="panel-heading"><span class="calendar">This Year:</span> New Account Development</div>
-        <%= line_chart @clients_months, { "discrete": true } %>
+        <%= line_chart @clients_months, {
+                            "library": { 
+                                "chart": {
+                                    "zoomType": "x"
+                                },
+                                "legend": {
+                                    "position": "top"
+                                },
+                                "hAxis": {
+                                    "title": "Date"
+                                },
+                                "vAxis": {
+                                    "title": "Clients"
+                                }
+                            },
+                            "discrete": true
+                        }  %>
     </div>
 </div>
