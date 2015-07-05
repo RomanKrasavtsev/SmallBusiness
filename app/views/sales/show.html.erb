@@ -2,12 +2,12 @@
 
 <p>
   <strong>Product:</strong>
-  <%= @sale.product %>
+  <%= Product.find(@sale.product).title %>
 </p>
 
 <p>
   <strong>Client:</strong>
-  <%= @sale.client %>
+  <%= Client.find(@sale.client).description %>
 </p>
 
 <p>
@@ -15,5 +15,5 @@
   <%= @sale.quantity %>
 </p>
 
-<%= link_to 'Edit', edit_sale_path(@sale) %> |
-<%= link_to 'Back', sales_path %>
+<%= link_to ' Edit', edit_sale_path(@sale) %> |
+<%= link_to ' Back', sales_path %>

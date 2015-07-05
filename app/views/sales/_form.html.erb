@@ -12,18 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :product_id %><br>
-    <%= f.text_field :product_id %>
-  </div>
-  <div class="field">
     <%= f.label :client_id %><br>
-    <%= f.text_field :client_id %>
+    <%= select("sale", "client_id", @clients.collect {|c| [ c.description, c.id ] }) %>
   </div>
+
+  <div class="field">
+    <%= f.label :product_id %><br>
+    <%= select("sale", "product_id", @products.collect {|p| [ p.title, p.id ] }) %>  
+  </div>
+
   <div class="field">
     <%= f.label :quantity %><br>
     <%= f.number_field :quantity %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'btn btn-primary fa' %>
   </div>
 <% end %>

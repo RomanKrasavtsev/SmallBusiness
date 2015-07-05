@@ -15,10 +15,14 @@ class SalesController < ApplicationController
   # GET /sales/new
   def new
     @sale = Sale.new
+    @clients = Client.order("description").all
+    @products = Product.order("title").all
   end
 
   # GET /sales/1/edit
   def edit
+    @clients = Client.order("description").all
+    @products = Product.order("title").all
   end
 
   # POST /sales
@@ -69,6 +73,6 @@ class SalesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sale_params
-      params.require(:sale).permit(:product_id, :client_id, :quantity)
+      params.require(:sale).permit(:client_id, :product_id, :quantity)
     end
 end
