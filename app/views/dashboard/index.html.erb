@@ -1,10 +1,10 @@
 <% if notice %>
     <p id="notice"><%= notice %></p>
 <% end %>
-<h1>Dashboard</h1>
+<h1><%= t(:dashboard) %></h1>
 <div class="entry">
      <div class="panel panel-default">
-        <div class="panel-heading"><span class="calendar">This Year:</span> New Account Development</div>
+        <div class="panel-heading"><span class="calendar">This Year:</span> <%= t(:new_account_development) %> </div>
         <%= line_chart @clients_months, {
             "library": { 
                 "chart": {
@@ -14,10 +14,10 @@
                     "position": "top"
                 },
                 "hAxis": {
-                    "title": "Date"
+                    "title": t(:date)
                 },
                 "vAxis": {
-                    "title": "New Clients"
+                    "title": t(:new_clients)
                 }
             },
             "discrete": true

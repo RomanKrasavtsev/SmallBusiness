@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
     clients_by_months = this_year_clients.group_by { |c| c.created_at.beginning_of_month }
 
     @clients_months = [{
-                        "name": "Planned",
+                        "name": t(:planned),
                         "data": {
                             'January 2015':   1,
                             'February 2015':  2,
@@ -20,7 +20,7 @@ class DashboardController < ApplicationController
                             'December 2015':  12
                         }}, 
                         { 
-                            "name": "Real", "data": {} 
+                            "name": t(:real), "data": {} 
                         }]
     
     clients_by_months.keys.sort.each do |month|
