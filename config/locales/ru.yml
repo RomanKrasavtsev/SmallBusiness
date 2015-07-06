@@ -19,17 +19,17 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  language: "En"
-  welcome: "Welcome to "
-  logout: "Log out"
-  dashboard: "Dashboard"
-  clients: "Clients"
-  sales: "Sales"
-  products: "Products"
-  plans: "Plans"
-  new_account_development: "New Account Development"
-  new_clients: "New Clients"
-  date: "Date"
-  planned: "Planned"
-  real: "Real"
+ru:
+  language: "Ru"
+  welcome: "Добро пожаловать на "
+  logout: "Выход"
+  dashboard: "Аналитика"
+  clients: "Клиенты"
+  sales: "Продажи"
+  products: "Товары"
+  plans: "Планы"
+  new_account_development: "Привлечение новых клиентов"
+  new_clients: "Новые клиенты"
+  date: "Дата"
+  planned: "Запланированные"
+  real: "Реальные"

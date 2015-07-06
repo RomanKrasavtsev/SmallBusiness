@@ -17,23 +17,23 @@
             <ul>
                 <li> 
                     <%= fa_icon "bar-chart" %>
-                    <%= link_to 'Dashboard', dashboard_path %>
+                    <%= link_to t(:dashboard), dashboard_path %>
                 </li>
                 <li>
                     <%= fa_icon "user" %>
-                    <%= link_to 'Clients', clients_path %>
+                    <%= link_to t(:clients), clients_path %>
                 </li>
                 <li>
                     <%= fa_icon "money" %>
-                    <%= link_to 'Sales', sales_path %>
+                    <%= link_to t(:sales), sales_path %>
                 </li>
                 <li>
                     <%= fa_icon "cubes" %>
-                    <%= link_to 'Products', products_path %>
+                    <%= link_to t(:products), products_path %>
                 </li>
                 <li>
                     <%= fa_icon "paper-plane" %>
-                    <%= link_to 'Plans', dashboard_path %>
+                    <%= link_to t(:plans), dashboard_path %>
                 </li>
             </ul>
         </div>
@@ -47,16 +47,16 @@
         </div>
         <div class="right">
             <div class="welcome">
-                Welcome to Mountt, 
+                <%= t(:welcome) %> Mountt, 
                 <span class="username">Roman Krasavtsev</span>
             </div>
             <div class="language">
                 <%= fa_icon "globe" %>
-                En
+                <%= t(:language) %>
             </div>
             <div class="logout">
                 <%= fa_icon "sign-out" %>
-                Log out
+                <%= t(:logout) %>
             </div>
         </div>
     </nav>
