@@ -6,18 +6,18 @@ class DashboardController < ApplicationController
     @clients_months = [{
                         "name": t(:planned),
                         "data": {
-                            'January 2015':   1,
-                            'February 2015':  2,
-                            'March 2015':     3,
-                            'April 2015':     4,
-                            'May 2015':       5,
-                            'June 2015':      6,
-                            'July 2015':      7,
-                            'August 2015':    8,
-                            'September 2015': 9,
-                            'October 2015':   10,
-                            'November 2015':  11,
-                            'December 2015':  12
+                            t(:january) +' 2015'    => 1,
+                            t(:february) + ' 2015'  => 2,
+                            t(:march) + ' 2015'     => 3,
+                            t(:april) + ' 2015'     => 4,
+                            t(:may) + ' 2015'       => 5,
+                            t(:june) + ' 2015'      => 6,
+                            t(:july) + ' 2015'      => 7,
+                            t(:august) + ' 2015'    => 8,
+                            t(:september) + ' 2015' => 9,
+                            t(:october) + ' 2015'   => 10,
+                            t(:november) + ' 2015'  => 11,
+                            t(:december) + ' 2015'  => 12
                         }}, 
                         { 
                             "name": t(:real), "data": {} 
