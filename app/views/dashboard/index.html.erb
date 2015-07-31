@@ -24,3 +24,26 @@
         } %>
     </div>
 </div>
+
+<div class="entry">
+     <div class="panel panel-default">
+        <div class="panel-heading"><span class="calendar"><%= t(:this_year) %>:</span> <%= t(:sales) %> </div>
+        <%= line_chart @sales_months, {
+            "library": { 
+                "chart": {
+                    "zoomType": "x"
+                },
+                "legend": {
+                    "position": "top"
+                },
+                "hAxis": {
+                    "title": t(:date)
+                },
+                "vAxis": {
+                    "title": t(:sales)
+                }
+            },
+            "discrete": true
+        } %>
+    </div>
+</div>

@@ -20,6 +20,24 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  date:
+    formats:
+      short: "%B %Y"
+      default: "%D %m, %Y"
+    month_names:
+    - 
+    - январь
+    - февраль
+    - март
+    - апрель
+    - май
+    - июнь
+    - июль
+    - август
+    - сентябрь
+    - октябрь
+    - ноябрь
+    - декабрь
   language: "Ru"
   welcome: "Добро пожаловать на "
   logout: "Выход"
@@ -34,15 +52,16 @@ ru:
   planned: "Запланированные"
   real: "Реальные"
   this_year: "Этот год"
-  january: "Январь"
-  february: "Февраль"
-  march: "Март"
-  april: "Апрель"
-  may: "Май"
-  june: "Июнь"
-  july: "Июль"
-  august: "Август"
-  september: "Сентябрь"
-  october: "Октябрь"
-  november: "Ноябрь"
-  december: "Декабрь"
+  January: "Январь"
+  February: "Февраль"
+  March: "Март"
+  April: "Апрель"
+  May: "Май"
+  June: "Июнь"
+  July: "Июль"
+  August: "Август"
+  September: "Сентябрь"
+  October: "Октябрь"
+  November: "Ноябрь"
+  December: "Декабрь"
+  sales: "Продажи"
