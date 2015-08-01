@@ -55,5 +55,7 @@ class DashboardController < ApplicationController
     end
 
     @sales_by_products = this_year_sales
+
+    @sales_by_clients = this_year_sales
   end
 end
