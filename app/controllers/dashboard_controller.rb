@@ -53,5 +53,7 @@ class DashboardController < ApplicationController
     sales_by_months.keys.sort.each do |month|
         @sales_months[1][:data][(t month.strftime("%B"), format: :short) + month.strftime(" %Y")] = sales_by_months[month].size
     end
+
+    @sales_by_products = this_year_sales
   end
 end
