@@ -54,8 +54,8 @@ class DashboardController < ApplicationController
         @sales_months[1][:data][(t month.strftime("%B"), format: :short) + month.strftime(" %Y")] = sales_by_months[month].size
     end
 
-    @sales_by_products = this_year_sales
+    @sales_by_products = this_year_sales.joins(:product).group("title").order("title").count
 
-    @sales_by_clients = this_year_sales
+    @sales_by_clients = this_year_sales.joins(:client).group("description").order("description").count
   end
 end

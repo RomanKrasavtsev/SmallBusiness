@@ -51,11 +51,11 @@
 <div class="entry-double">
     <div class="panel panel-default" style="width: 50%; display:inline; float: left;">
         <div class="panel-heading"><span class="calendar"><%= t(:this_year) %>:</span> <%= t(:sales_by_products) %> </div>
-        <%= pie_chart @sales_by_products.joins(:product).group("title").count %>
+        <%= pie_chart @sales_by_products %>
     </div>
 
     <div class="panel panel-default" style="width: 50%; display:inline; float: right;">
         <div class="panel-heading"><span class="calendar"><%= t(:this_year) %>:</span> <%= t(:sales_by_clients) %> </div>
-        <%= pie_chart @sales_by_products.joins(:client).group("description").count %>
+        <%= pie_chart @sales_by_products %>
     </div>
 </div>
