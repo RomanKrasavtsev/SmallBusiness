@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   resources :sales
   resources :products
-  get 'dashboard/index'
-
   resources :clients
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root to: 'dashboard#index', as: 'dashboard'
+
+  get 'info', to: 'info#index' 
+
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
